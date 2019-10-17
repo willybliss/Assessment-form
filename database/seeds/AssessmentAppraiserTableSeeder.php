@@ -1,5 +1,5 @@
 <?php
-use App\Mdoel\Assessment_Appraiser;
+use App\Model\Assessment_Appraiser;
 use Illuminate\Database\Seeder;
 
 class AssessmentAppraiserTableSeeder extends Seeder
