@@ -15,11 +15,26 @@ class CreateAssessmentStaffTable extends Migration
     {
         Schema::create('assessment__staff', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('staff_id');
-            $table->unsignedInteger('category_id');
-            $table->unsignedInteger('rating_id');
-            $table->unsignedInteger('skill_id');
+
+            $table->unsignedBigInteger('staff_id');
+
+            $table->unsignedBigInteger('category_id');
+
+            $table->unsignedBigInteger('rating_id');
+
+            $table->unsignedBigInteger('skill_id');
+
             $table->timestamps();
+
+            $table->foreign('staff_id')->references('id')->on('users');
+
+           // $table->foreign('category_id')->references('id')->on('categories');
+
+          //  $table->foreign('rating_id')->references('id')->on('ratings');
+
+           // $table->foreign('skill_id')->references('id')->on('skills');
+            
+
         });
     }
 

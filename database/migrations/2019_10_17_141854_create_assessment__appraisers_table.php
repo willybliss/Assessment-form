@@ -17,17 +17,29 @@ class CreateAssessmentAppraisersTable extends Migration
             
             $table->bigIncrements('id');
 
-            $table->unsignedInteger('appraiser_id');
+            $table->unsignedBigInteger('appraiser_id');
 
-            $table->unsignedInteger('category_id');
+            //$table->unsignedInteger('category_id');
             
-            $table->unsignedInteger('rating_id');
+            //$table->unsignedInteger('rating_id');
             
-            $table->unsignedInteger('skill_id');
+            //$table->unsignedInteger('skill_id');
             
-            $table->unsignedInteger('staff_id');
+           // $table->unsignedInteger('staff_id');
             
             $table->timestamps();
+
+            //$table->foreign('appraiser_id')->references('id')->on('users');
+
+            //$table->foreign('category_id')->references('id')->on('categories');
+
+            //$table->foreign('rating_id')->references('id')->on('ratings');
+
+            //$table->foreign('skills')->references('id')->on('skills');
+            
+            //$table->foreign('staff_id')->references('id')->on('users')
+        
+
         });
     }
 

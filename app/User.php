@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+    public function assessmentstaff()
+    {
+        return $this->hasOne('App\Model\Assessment_Staff');
+    }
 }
